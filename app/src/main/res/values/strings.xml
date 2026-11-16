@@ -1,0 +1,67 @@
+<resources>
+    <string name="app_name">KasBon</string>
+    <string name="login_subtitle">Catat hutang dan piutang dengan rapi</string>
+    <string name="register_title">Buat Akun</string>
+
+    <string name="hint_name">Nama lengkap</string>
+    <string name="hint_email">Email</string>
+    <string name="hint_password">Password</string>
+    <string name="hint_confirm">Konfirmasi password</string>
+
+    <string name="btn_login">Masuk</string>
+    <string name="btn_register">Daftar</string>
+    <string name="to_register">Belum punya akun? Daftar</string>
+    <string name="to_login">Sudah punya akun? Masuk</string>
+
+    <string name="error_name_empty">Nama tidak boleh kosong</string>
+    <string name="error_email_invalid">Format email tidak valid</string>
+    <string name="error_password_short">Password minimal 6 karakter</string>
+    <string name="error_password_mismatch">Konfirmasi password tidak sama</string>
+    <string name="error_email_used">Email sudah terdaftar</string>
+    <string name="error_login_failed">Email atau password salah</string>
+    <string name="error_register_failed">Pendaftaran gagal, coba lagi</string>
+    <string name="error_network">Tidak ada koneksi internet</string>
+
+    <string name="main_welcome">Halo, %1$s!</string>
+    <string name="btn_logout">Keluar</string>
+
+    <!-- Hari 2: daftar dan form catatan -->
+    <string name="jenis_hutang">Hutang</string>
+    <string name="jenis_piutang">Piutang</string>
+    <string name="label_jenis">Jenis catatan</string>
+    <string name="label_jatuh_tempo">Jatuh tempo: %1$s</string>
+    <string name="status_lunas">Lunas</string>
+    <string name="status_belum_lunas">Belum lunas</string>
+    <string name="label_lunas">Sudah lunas</string>
+
+    <string name="empty_catatan">Belum ada catatan.\nKetuk Tambah untuk mulai.</string>
+    <string name="banner_offline">Tidak ada koneksi internet</string>
+    <string name="error_muat_data">Gagal memuat data. Periksa koneksi internet.</string>
+    <string name="btn_coba_lagi">Coba lagi</string>
+
+    <string name="btn_tambah">Tambah</string>
+    <string name="btn_simpan">Simpan</string>
+    <string name="btn_batal">Batal</string>
+    <string name="btn_hapus">Hapus</string>
+
+    <string name="dialog_hapus_judul">Hapus catatan?</string>
+    <string name="dialog_hapus_pesan">Catatan %1$s akan dihapus permanen.</string>
+    <string name="toast_dihapus">Catatan dihapus</string>
+    <string name="toast_tersimpan">Catatan tersimpan</string>
+
+    <string name="judul_tambah">Tambah Catatan</string>
+    <string name="judul_edit">Ubah Catatan</string>
+    <string name="hint_nama_orang">Nama orang</string>
+    <string name="hint_nominal">Nominal (Rp)</string>
+    <string name="hint_tanggal_pinjam">Tanggal pinjam</string>
+    <string name="hint_jatuh_tempo">Jatuh tempo</string>
+    <string name="hint_catatan">Catatan (opsional)</string>
+
+    <string name="error_nama_kosong">Nama tidak boleh kosong</string>
+    <string name="error_nominal">Nominal harus berupa angka lebih dari 0</string>
+    <string name="error_tanggal_kosong">Tanggal harus dipilih</string>
+    <string name="error_tanggal_urutan">Jatuh tempo tidak boleh sebelum tanggal pinjam</string>
+    <string name="error_offline">Tidak ada koneksi internet</string>
+    <string name="error_gagal_simpan">Gagal menyimpan, coba lagi</string>
+    <string name="error_gagal_hapus">Gagal menghapus, coba lagi</string>
+</resources>

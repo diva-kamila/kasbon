@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "422525870291",
+    "project_id": "kasbon-aa8d1",
+    "storage_bucket": "kasbon-aa8d1.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:422525870291:android:4e87d28cbb531174ff7426",
+        "android_client_info": {
+          "package_name": "com.example.kasbon"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyC3vI36do_wBMHWthzxuneRJTKtepjM-Ww"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
