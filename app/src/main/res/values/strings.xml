@@ -64,4 +64,33 @@
     <string name="error_offline">Tidak ada koneksi internet</string>
     <string name="error_gagal_simpan">Gagal menyimpan, coba lagi</string>
     <string name="error_gagal_hapus">Gagal menghapus, coba lagi</string>
+
+    <!-- Hari 3: navigasi, pencarian, filter, detail, ringkasan, profil -->
+    <string name="nav_daftar">Beranda</string>
+    <string name="nav_ringkasan">Ringkasan</string>
+    <string name="nav_profil">Profil</string>
+
+    <string name="hint_cari">Cari nama atau catatan</string>
+    <string name="filter_semua">Semua</string>
+    <string name="filter_semua_status">Semua status</string>
+    <string name="tidak_ada_hasil">Tidak ada catatan yang cocok.\nCoba kata kunci atau filter lain.</string>
+
+    <string name="ringkasan_title">Ringkasan</string>
+    <string name="ringkasan_hutang">Total hutang belum lunas</string>
+    <string name="ringkasan_piutang">Total piutang belum lunas</string>
+    <string name="ringkasan_jumlah">%1$d catatan, %2$d sudah lunas</string>
+
+    <string name="profil_title">Profil</string>
+    <string name="label_nama">Nama</string>
+    <string name="label_email">Email</string>
+
+    <string name="detail_title">Detail Catatan</string>
+    <string name="detail_tanggal_pinjam">Tanggal pinjam: %1$s</string>
+    <string name="detail_catatan">Catatan: %1$s</string>
+    <string name="detail_tanpa_catatan">Tidak ada catatan</string>
+    <string name="btn_ubah">Ubah</string>
+    <string name="btn_tandai_lunas">Tandai lunas</string>
+    <string name="btn_tandai_belum">Tandai belum lunas</string>
+    <string name="error_gagal_ubah">Gagal mengubah status, coba lagi</string>
+    <string name="error_detail_gagal">Gagal memuat data</string>
 </resources>

@@ -16,7 +16,7 @@ object CatatanRepository {
             .collection("users").document(uid).collection("catatan")
     }
 
-    // Mendengarkan perubahan data secara langsung (realtime)
+    // Mendengarkan seluruh daftar catatan secara langsung (realtime)
     fun dengarkan(
         onHasil: (List<Catatan>) -> Unit,
         onGagal: (Exception) -> Unit
@@ -39,6 +39,30 @@ object CatatanRepository {
             }
     }
 
+    // Mendengarkan satu catatan (untuk halaman detail). Hasil null berarti catatan sudah dihapus.
+    fun dengarkanSatu(
+        id: String,
+        onHasil: (Catatan?) -> Unit,
+        onGagal: (Exception) -> Unit
+    ): ListenerRegistration? {
+        val col = koleksi()
+        if (col == null) {
+            onGagal(IllegalStateException("Belum login"))
+            return null
+        }
+        return col.document(id).addSnapshotListener { doc, error ->
+            if (error != null) {
+                onGagal(error)
+                return@addSnapshotListener
+            }
+            if (doc == null || !doc.exists()) {
+                onHasil(null)
+                return@addSnapshotListener
+            }
+            onHasil(doc.toObject(Catatan::class.java)?.copy(id = doc.id))
+        }
+    }
+
     // Tambah baru (id kosong) atau ubah (id terisi)
     fun simpan(catatan: Catatan, onBerhasil: () -> Unit, onGagal: (Exception) -> Unit) {
         val col = koleksi()
@@ -48,6 +72,18 @@ object CatatanRepository {
         }
         val ref = if (catatan.id.isEmpty()) col.document() else col.document(catatan.id)
         ref.set(catatan.copy(id = ref.id))
+            .addOnSuccessListener { onBerhasil() }
+            .addOnFailureListener { e -> onGagal(e) }
+    }
+
+    // Mengubah status lunas saja
+    fun ubahLunas(id: String, lunas: Boolean, onBerhasil: () -> Unit, onGagal: (Exception) -> Unit) {
+        val col = koleksi()
+        if (col == null) {
+            onGagal(IllegalStateException("Belum login"))
+            return
+        }
+        col.document(id).update("lunas", lunas)
             .addOnSuccessListener { onBerhasil() }
             .addOnFailureListener { e -> onGagal(e) }
     }
