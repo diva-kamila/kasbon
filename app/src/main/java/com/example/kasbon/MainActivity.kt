@@ -1,7 +1,10 @@
 package com.example.kasbon
 
+import android.Manifest
 import android.content.Intent
+import android.os.Build
 import android.os.Bundle
+import androidx.activity.result.contract.ActivityResultContracts
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
@@ -13,6 +16,10 @@ import com.google.firebase.auth.FirebaseAuth
 class MainActivity : AppCompatActivity() {
 
     private lateinit var binding: ActivityMainBinding
+
+    // Permintaan izin notifikasi. Kalau ditolak, aplikasi tetap berjalan normal.
+    private val izinNotifikasi =
+        registerForActivityResult(ActivityResultContracts.RequestPermission()) { _ -> }
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -50,6 +57,16 @@ class MainActivity : AppCompatActivity() {
         if (savedInstanceState == null) {
             binding.bottomNav.selectedItemId = R.id.nav_daftar
         }
+
+        siapkanPengingat()
+    }
+
+    // Minta izin notifikasi (Android 13+) dan jadwalkan pengecekan harian
+    private fun siapkanPengingat() {
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.TIRAMISU && !Pengingat.izinDiberikan(this)) {
+            izinNotifikasi.launch(Manifest.permission.POST_NOTIFICATIONS)
+        }
+        Pengingat.jadwalkan(this)
     }
 
     private fun tampilkan(fragment: Fragment) {

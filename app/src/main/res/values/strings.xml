@@ -93,4 +93,16 @@
     <string name="btn_tandai_belum">Tandai belum lunas</string>
     <string name="error_gagal_ubah">Gagal mengubah status, coba lagi</string>
     <string name="error_detail_gagal">Gagal memuat data</string>
+
+    <!-- Hari 4: pengingat jatuh tempo -->
+    <string name="notif_channel_nama">Pengingat jatuh tempo</string>
+    <string name="notif_channel_deskripsi">Pemberitahuan catatan yang jatuh tempo hari ini, besok, atau terlambat</string>
+    <string name="notif_judul">KasBon: pengingat jatuh tempo</string>
+    <string name="notif_isi">%1$d catatan jatuh tempo atau terlambat: %2$s</string>
+    <string name="notif_kosong">Tidak ada catatan yang jatuh tempo hari ini atau besok.</string>
+    <string name="label_pengingat">Pengingat jatuh tempo</string>
+    <string name="info_pengingat">KasBon mengecek catatan belum lunas sekali sehari dan mengirim notifikasi kalau ada yang jatuh tempo atau terlambat.</string>
+    <string name="btn_tes_notif">Kirim pengingat sekarang</string>
+    <string name="toast_tes_notif">Mengecek catatan jatuh tempo…</string>
+    <string name="toast_izin_notif">Izin notifikasi belum diberikan. Aktifkan di Pengaturan aplikasi.</string>
 </resources>
